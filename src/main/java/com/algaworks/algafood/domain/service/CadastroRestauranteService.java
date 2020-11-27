@@ -42,7 +42,7 @@ public class CadastroRestauranteService {
                         String.format("Não existe cadastro de restaurante com o código %d", restauranteId)));
 
         BeanUtils.copyProperties(restaurante, restauranteSalvo,
-                "id", "formasPagamento", "endereco");
+                "id", "formasPagamento", "endereco", "dataCadastro");
         restauranteSalvo = restauranteRepository.save(restauranteSalvo);
         return restauranteSalvo;
     }
